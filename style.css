@@ -151,24 +151,3 @@ main p {
   font-size: 0.9rem;
   line-height: 1.6;
 }
-/* Smaller screens */
-@media (max-width: 1050px) {
-  .outside-image {
-    display: none;
-  }
-
-  main {
-    max-width: 32rem;
-  }
-}
-
-@media (max-width: 550px) {
-  main {
-    margin: 1rem;
-    padding: 1.2rem;
-  }
-
-  .left-images img {
-    height: 95px;
-  }
-}
