@@ -39,7 +39,7 @@ main {
 }
 
 /* Headers */
-h1, h2, h3 {
+h1, h2 {
   font-family: "Monoton", "Space Grotesk", sans-serif;
   font-weight: 400;
   line-height: 1.1;
@@ -56,7 +56,7 @@ h1 {
     0 0 40px rgba(255, 42, 80, 0.45);
 }
 
-h2, h3 {
+h2 {
   margin-top: 2.5rem;
   font-size: clamp(1.2rem, 3.6vw, 1.76rem);
   color: #ff2a50;
@@ -65,14 +65,7 @@ h2, h3 {
     0 0 18px rgba(255, 42, 80, 0.55),
     0 0 36px rgba(208, 32, 138, 0.4);
 }
-h3 {
- 
-  color: #6e6ee5;
-  text-shadow:
-    0 0 6px rgba(60, 42, 255, 0.9),
-    0 0 18px rgba(63, 42, 255, 0.55),
-    0 0 36px rgba(44, 32, 208, 0.4);
-}
+
 
 p {
   font-size: 0.9rem;
