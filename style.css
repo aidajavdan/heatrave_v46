@@ -6,7 +6,7 @@ body {
   color: #f4eaff;
 }
 
-/* The Pixi canvas sits behind the text */
+/* Pixi canvas is behind the text */
 canvas {
   position: fixed;
   top: 0;
@@ -14,7 +14,7 @@ canvas {
   z-index: -1;
 }
 
-/* Dark glass panel so the text stays readable over the glowing dots */
+/* Box for text */
 main {
   max-width: 32rem;
   margin: 1.6rem;
@@ -26,7 +26,7 @@ main {
     inset 0 0 19.2px rgba(255, 140, 26, 0.5);
 }
 
-/* Neon tube headings: the bigger the heading, the hotter the color */
+/* Neon headers (h1,h2) */
 h1, h2{
   font-family: "Monoton", "Space Grotesk", sans-serif;
   font-weight: 400;
