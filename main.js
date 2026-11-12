@@ -1,6 +1,6 @@
 const HEAT_STOPS = [0x3627a3, 0x5a2dff, 0x8a22d0, 0xd0208a, 0xff2a50, 0xff8c1a, 0xffd21f];
 const app = new PIXI.Application();
-const lasers = new PIXI.Graphics(), equalizer =new PIXI.Graphics(),
+const lasers = new PIXI.Graphics(), 
 glow = new PIXI.Graphics(), dots = new PIXI.Graphics(), sparks = new PIXI.Graphics();
 glow.filters = [new PIXI.BlurFilter({ strength: 5 })];
 
@@ -22,7 +22,7 @@ function heat(v) {
 }
 
 // Overlapping layers are additive 
-for (const layer of [lasers, equalizer, glow, dots, sparks]) {
+for (const layer of [lasers, glow, dots, sparks]) {
   layer.blendMode = "add";
   app.stage.addChild(layer);
 }
@@ -71,21 +71,6 @@ app.ticker.add(() => {
         ]).fill({ color: beamColors[b], alpha });
       }
     }
-  }
-
-  // Equalizer
-  equalizer.clear();
- // Set width and height of the bars and calcluate how many is needed to fill the page and move them with sin
-  const barWidth = 18, barGap = 10;
-  const maxBar = h * 0.12;
-  const barCount = Math.ceil(w / (barWidth + barGap));
-
-  for (let b = 0; b < barCount; b++) {
-    const level = (Math.sin(t * 0.004 + b * 0.7) * 0.5 + 0.5) * (Math.sin(t * 0.0023 + b * 1.9) * 0.5 + 0.5);
-    const barH = 4 + level * maxBar;
-
-    equalizer.rect(b * (barWidth + barGap), h - barH, barWidth, barH)
-      .fill({ color: heat(Math.sqrt(level)), alpha: 0.16 });
   }
 
   // Dot grid
