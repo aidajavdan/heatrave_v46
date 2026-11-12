@@ -1,19 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;500;700&display=swap");
 
-:root {
-  --bg: #07000f;
-  --text: #f4eaff;
-  --red: #ff2a50; 
-  --orange: #ff8c1a; 
-}
-
 body {
-  margin: 0;
   font-family: "Space Grotesk", system-ui, sans-serif;
   font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
+  color: #f4eaff;
 }
 
 /* The Pixi canvas sits behind the text */
@@ -26,21 +16,18 @@ canvas {
 
 /* Dark glass panel so the text stays readable over the glowing dots */
 main {
-  max-width: 40rem;
-  margin: 2rem;
-  padding: 2rem;
-  background: rgba(7, 0, 15, 0.72);
-  backdrop-filter: blur(6px);
-  border: 1px solid var(--heat-2);
+  max-width: 32rem;
+  margin: 1.6rem;
+  padding: 1.6rem;
+  backdrop-filter: blur(4.8px);
   box-shadow:
-    0 0 0 1px rgba(208, 32, 138, 0.35),
-    0 0 24px var(--red),
-    inset 0 0 24px rgba(255, 140, 26, 0.5);
+    0 0 0 0.8px rgba(208, 32, 138, 0.35),
+    0 0 19.2px #ff2a50,
+    inset 0 0 19.2px rgba(255, 140, 26, 0.5);
 }
 
 /* Neon tube headings: the bigger the heading, the hotter the color */
-h1,
-h2{
+h1, h2{
   font-family: "Monoton", "Space Grotesk", sans-serif;
   font-weight: 400;
   line-height: 1.1;
@@ -49,8 +36,8 @@ h2{
 }
 
 h1 {
-  font-size: clamp(2.2rem, 7vw, 3.6rem);
-  color: var(--orange);
+  font-size: clamp(1.76rem, 5.6vw, 2.88rem);
+  color: #ff8c1a;
   text-shadow:
     0 0 6px rgba(255, 140, 26, 0.9),
     0 0 18px rgba(255, 140, 26, 0.6),
@@ -58,10 +45,16 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4.5vw, 2.2rem);
-  color: var(--red);
+  margin-top: 3rem;
+  font-size: clamp(1.2rem, 3.6vw, 1.76rem);
+  color: #ff2a50;
   text-shadow:
     0 0 6px rgba(255, 42, 80, 0.9),
     0 0 18px rgba(255, 42, 80, 0.55),
     0 0 36px rgba(208, 32, 138, 0.4);
 }
+
+p, li{
+  font-size: 0.9rem;
+}
+
