@@ -80,20 +80,13 @@ p {
   line-height: 1.6;
 }
 
-.rave-gallery {
+/* Images */
+.image-container {
   margin-top: 2rem;
-}
-
-.rave-gallery h2 {
-  margin-top: 2rem;
-}
-
-.left-images {
   display: flex;
   gap: 12px;
 }
-
-.left-images img {
+.image-container img {
   width: 50%;
   height: 115px;
   object-fit: cover;
@@ -102,8 +95,8 @@ p {
   transition: 0.3s;
 }
 
-/* Hover effect */
-.left-images img:hover{
+/* Hover effect on images */
+.image-container img:hover{
   transform: scale(1.03);
   box-shadow: 0 0 22px #ff8c1a;
 }
